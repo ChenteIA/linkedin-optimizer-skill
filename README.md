@@ -1,5 +1,16 @@
 # 🚀 LinkedIn Optimizer — Skill para Claude
 
+<p align="center">
+  <img src="./assets/banner.svg" alt="LinkedIn Optimizer — Claude Skill by ChenteIA" width="100%">
+</p>
+
+<h1 align="center">🚀 LinkedIn Optimizer — Skill para Claude</h1>
+
+<p align="center">
+  Auditoría y optimización completa de perfiles de LinkedIn con un sistema multi-agente de IA.<br>
+  Creado por <a href="https://github.com/ChenteIA"><b>ChenteIA</b></a> 🇵🇪 · Universidad Nacional San Luis Gonzaga de Ica
+</p>
+
 > Auditoría y optimización completa de perfiles de LinkedIn con un sistema multi-agente de IA.
 > Creado por **[ChenteIA](https://github.com/ChenteIA)** 🇵🇪 · Universidad Nacional San Luis Gonzaga de Ica
 
