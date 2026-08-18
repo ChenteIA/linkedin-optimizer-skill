@@ -1,105 +1,173 @@
-# Estructura exacta del reporte
+# Exact report structure
 
-Usa esta plantilla tal cual: mismos encabezados, emojis, negritas, blockquotes y checklists. Los corchetes `[...]` son instrucciones de relleno — NUNCA deben aparecer en el output final. Adapta el idioma completo al del perfil.
+Use this template as-is: same headings, emojis, bold, blockquotes, and checklists. Brackets `[...]` are fill-in instructions — they must NEVER appear in the final output.
 
-```markdown
-# 🚀 Auditoría y Optimización de LinkedIn: [Nombre del Usuario]
+> ⚠️ **This template is shown in English for maintainability. The output is NOT English by default.** Translate every heading, label, and body text into the language of the user's profile, per the Language Lock rule in `SKILL.md`. Keep the emojis, order, numbering, and formatting identical across languages. For Spanish — the most common case — use the label glossary at the bottom of this file verbatim.
 
-**Puntuación Global del Perfil:** [X/100]
-**Rol detectado:** [Rol principal]
-**Ubicación:** [Ciudad, País]
+````markdown
+# 🚀 LinkedIn Audit and Optimization: [User's name]
+
+**Global Profile Score:** [X/100 — computed with the rubric in `agentes.md`]
+**Detected role:** [Main role]
+**Location:** [City, Country]
 
 ---
 
-## 📊 1. Diagnóstico Estratégico
-*Análisis consolidado del Agente Estratega y el Headhunter.*
+## 📊 1. Strategic Diagnosis
+*Consolidated analysis from the Strategist and Headhunter agents.*
 
-- **Objetivo aparente:** [El objetivo que declaró el usuario en el cuestionario: empleo, ventas, autoridad, networking, cambio de carrera, beca/maestría, inversionistas, u otro]
-- **Público Objetivo (ICP):** [A quién va dirigido el perfil]
-- **Mecanismo de conversión actual:** [Cómo genera oportunidades hoy]
-- 🔴 **Vacíos Críticos (Gaps):**
+- **Declared goal:** [The goal the user declared in the questionnaire: employment, sales, authority, networking, career change, scholarship/master's, investors, or other]
+- **Target audience (ICP):** [Who the profile is aimed at]
+- **Current conversion mechanism:** [How they generate opportunities today]
+- 🔴 **Critical gaps:**
   - [Gap 1]
   - [Gap 2]
-- 🟢 **Fortalezas:**
-  - [Fortaleza 1]
-  - [Fortaleza 2]
+- 🟢 **Strengths:**
+  - [Strength 1]
+  - [Strength 2]
 
 ---
 
-## ✍️ 2. Optimización del Titular (Headline)
-*Tu titular es lo más importante para el SEO de LinkedIn.*
+## ✍️ 2. Headline Optimization
+*Your headline is the single most important element for LinkedIn SEO.*
 
-**❌ Titular Actual:**
-> "[Titular exacto del material]"
-*(Problemas: [Menciona 1 o 2 errores detectados])*
+**❌ Current headline:**
+> "[Exact headline from the material]"
+*(Problems: [name 1 or 2 detected issues])*
 
-**✅ Titular Optimizado (Copia y pega):**
-> "[Nueva versión redactada por el Copywriter, máx 220 caracteres. Incluye Keywords, prueba social y valor]"
+**✅ Optimized headline (copy and paste):**
+> "[New version, max 220 characters. Role + value within the first ~70; SEO keywords after that]"
 
-**💡 Por qué funciona:**
-- [Razón 1]
-- [Razón 2]
+*(Characters: [N]/220 · Visible in search: "[the first ~70 characters, exactly as they will appear truncated]")*
 
----
-
-## 📖 3. Optimización del Acerca de (About)
-*El Agente Copywriter ha reescrito tu historia para convertir lectores en leads/entrevistas.*
-
-**✅ Acerca de Optimizado (Copia y pega):**
-[About completo de mínimo 200 palabras. Estructura obligatoria:
-1. Hook al dolor/necesidad del lector.
-2. Solución/Valor aportado.
-3. Prueba social con métricas.
-4. Especialidades en formato lista.
-5. CTA claro al final, alineado al objetivo declarado].
-
-**💡 Checklist de implementación:**
-- [ ] Añadir saltos de línea para facilitar la lectura.
-- [ ] Etiquetar las skills en la sección correspondiente de LinkedIn.
+**💡 Why it works:**
+- [Reason 1]
+- [Reason 2]
 
 ---
 
-## 💼 4. Optimización de Experiencia Principal
-**❌ Descripción Actual:**
-> "[Breve resumen de lo actual, o 'No visible en el material subido']"
+## 📖 3. About Section Optimization
+*The Copywriter agent has rewritten your story to turn readers into leads/interviews.*
 
-**✅ Descripción Optimizada:**
-> "[Texto optimizado por el Headhunter con: métricas de impacto, metodologías y palabras clave técnicas]"
+**✅ Optimized About (copy and paste):**
+[Complete About, max 2,600 characters, 200–350 words recommended. Structure:
+1. Hook to the reader's pain/need — MUST fit and work standalone within the first ~300 characters.
+2. Solution/value delivered.
+3. Social proof: metrics if they exist in the material; verifiable qualitative evidence if not.
+4. Specialties as a list.
+5. Clear CTA at the end, aligned with the declared goal].
+
+*(Characters: [N]/2,600)*
+
+**💡 Implementation checklist:**
+- [ ] Add line breaks for readability.
+- [ ] Verify the first line reads in full before the "see more" cutoff.
+- [ ] Tag the skills in LinkedIn's corresponding section.
 
 ---
 
-## ⭐ 5. Destacados (Featured) y Skills
-*Recomendaciones del Agente Estratega para generar autoridad.*
+## 💼 4. Main Experience Optimization
+**❌ Current description:**
+> "[Brief summary of the current text, or 'Not visible in the uploaded material']"
 
-**📌 Top 3 Skills a priorizar:**
+**✅ Optimized description:**
+> "[Text optimized by the Headhunter, max 2,000 characters, with: outcomes, methodologies, and technical keywords]"
+
+---
+
+## ⭐ 5. Featured and Skills
+*Recommendations from the Strategist agent to build authority.*
+
+**📌 Top 3 skills to prioritize:**
 1. [Skill 1]
 2. [Skill 2]
-3. [Skill diferenciadora]
-*(Keywords a añadir para ATS: [keyword 1, keyword 2, keyword 3])*
+3. [Differentiating skill]
+*(Keywords to add for ATS: [keyword 1, keyword 2, keyword 3])*
 
-**🎯 Qué poner en Destacados:**
-- [Propuesta 1 con emoji numerado y propósito]
-- [Propuesta 2 con emoji numerado y propósito]
+**🎯 What to put in Featured:**
+- [Proposal 1 with numbered emoji and purpose]
+- [Proposal 2 with numbered emoji and purpose]
 
 ---
 
-## 🤝 6. Recomendaciones
-*Usa este mensaje directo (DM) para pedir recomendaciones estratégicas a tus contactos.*
+## 🤝 6. Recommendations
+*Use this direct message (DM) to request strategic recommendations from your contacts.*
 
-[Si el perfil NO tiene recomendaciones: decirlo explícitamente y explicar por qué importa para su objetivo. Si YA tiene: reconocerlas y sugerir qué ángulo/skill falta validar con la siguiente.]
+[If the profile has NO recommendations: say so explicitly and explain why it matters for their goal. If it ALREADY has some: acknowledge them and suggest which angle/skill the next one should validate.]
 
-**📨 Guión listo para enviar:**
-> "Hola [Nombre], espero que estés genial.
-> Estoy actualizando mi perfil profesional y tu feedback sería súper valioso para mí. ¿Te animarías a dejarme una breve recomendación en LinkedIn destacando [skill o proyecto REAL del perfil]?
+**📨 Ready-to-send script:**
+> "Hi [Name], hope you're doing great.
+> I'm updating my professional profile and your feedback would be really valuable to me. Would you be up for leaving me a short LinkedIn recommendation highlighting [a REAL skill or project from the profile]?
 >
-> Para hacértelo fácil, aquí tienes un borrador que puedes editar:
-> "[Borrador breve de 3 líneas que la persona solo deba aceptar]"
+> To make it easy, here's a draft you can edit:
+> "[Short 3-line draft the person only has to accept]"
 >
-> Avísame si necesitas una mía de vuelta. ¡Un abrazo!"
-```
+> Let me know if you'd like one from me in return. Cheers!"
 
-## Reglas de relleno
+---
 
-- Todo texto marcado "Copia y pega" sale completo, sin corchetes ni placeholders.
-- El guión de DM se personaliza con una skill/proyecto real del material — el único placeholder permitido en el output es `[Nombre]` del destinatario del DM, porque eso lo rellena el usuario al enviar.
-- Secciones sin datos en el material: "Actual" = "No visible en el material subido"; "Optimizada" = propuesta desde cero.
+## 🧹 7. Profile Hygiene
+*Low-effort, high-impact fixes. Mark ✅ what's already fine, 🔴 what's missing, and ❓ what isn't visible in the material.*
+
+| Item | Status | What to do |
+|---|---|---|
+| Profile photo | [✅/🔴/❓] | [Concrete action or "fine as is"] |
+| Background banner | [✅/🔴/❓] | [Action] |
+| Custom URL | [✅/🔴/❓] | [E.g. change to linkedin.com/in/firstname-lastname] |
+| Location and industry | [✅/🔴/❓] | [Action] |
+| Open to Work / Services | [✅/🔴/❓] | [Based on the declared goal] |
+| Education and certifications | [✅/🔴/❓] | [Action] |
+| Languages | [✅/🔴/❓] | [Action] |
+| Skills with endorsements | [✅/🔴/❓] | [Action] |
+
+---
+
+## 🎯 8. Action Plan — This week
+*If you only do three things, make it these. Ordered by impact on your declared goal.*
+
+1. **[Action 1]** — [Why it moves the needle · estimated time]
+2. **[Action 2]** — [Why · estimated time]
+3. **[Action 3]** — [Why · estimated time]
+````
+
+## Fill-in rules
+
+- Every text marked "copy and paste" ships complete, with no brackets or placeholders, and within the stated character limit.
+- Character counters (`[N]/220`, `[N]/2,600`) are filled with the real count of the text you generated. Count them; do not estimate.
+- The DM script is personalized with a real skill/project from the material — the only placeholder allowed in the output is the recipient's `[Name]`, because the user fills that in when sending.
+- Sections with no data in the material: "Current" = "Not visible in the uploaded material" (translated); "Optimized" = proposal from scratch.
+- In section 7, ❓ means "does not appear in the PDF or screenshots" — do not treat it as the user's mistake, just flag that you cannot verify it.
+- Section 8 carries **a maximum of 3 actions**, always specific and referring to concrete sections of this report. Never generic ones like "improve your presence".
+
+## Spanish label glossary (use verbatim when the profile is in Spanish)
+
+| English | Spanish |
+|---|---|
+| LinkedIn Audit and Optimization | Auditoría y Optimización de LinkedIn |
+| Global Profile Score | Puntuación Global del Perfil |
+| Detected role / Location | Rol detectado / Ubicación |
+| Strategic Diagnosis | Diagnóstico Estratégico |
+| Declared goal | Objetivo declarado |
+| Target audience (ICP) | Público Objetivo (ICP) |
+| Current conversion mechanism | Mecanismo de conversión actual |
+| Critical gaps / Strengths | Vacíos Críticos (Gaps) / Fortalezas |
+| Headline Optimization | Optimización del Titular (Headline) |
+| Current headline / Optimized headline | Titular Actual / Titular Optimizado |
+| Why it works | Por qué funciona |
+| Characters / Visible in search | Caracteres / Visible en búsqueda |
+| About Section Optimization | Optimización del Acerca de (About) |
+| Optimized About | Acerca de Optimizado |
+| Implementation checklist | Checklist de implementación |
+| Main Experience Optimization | Optimización de Experiencia Principal |
+| Current description / Optimized description | Descripción Actual / Descripción Optimizada |
+| Featured and Skills | Destacados (Featured) y Skills |
+| Top 3 skills to prioritize | Top 3 Skills a priorizar |
+| Keywords to add for ATS | Keywords a añadir para ATS |
+| What to put in Featured | Qué poner en Destacados |
+| Recommendations | Recomendaciones |
+| Ready-to-send script | Guión listo para enviar |
+| Profile Hygiene | Higiene del Perfil |
+| Item / Status / What to do | Elemento / Estado / Qué hacer |
+| Action Plan — This week | Plan de Acción — Esta semana |
+| copy and paste | Copia y pega |
+| Not visible in the uploaded material | No visible en el material subido |

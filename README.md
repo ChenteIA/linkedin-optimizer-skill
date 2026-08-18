@@ -31,6 +31,8 @@ Convierte a Claude en un **Lead LinkedIn Optimizer**: subes tu perfil de LinkedI
 | 💼 Experiencia | Descripción con métricas de impacto y keywords técnicas |
 | ⭐ Destacados y Skills | Top 3 skills + keywords ATS + propuestas de Featured |
 | 🤝 Recomendaciones | Guión de DM personalizado para pedir recomendaciones |
+| 🧹 Higiene del perfil | Checklist de foto, banner, URL, idiomas y certificaciones |
+| 🎯 Plan de acción | Las 3 cosas a ejecutar esta semana, ordenadas por impacto |
 
 ## 🤖 Sistema multi-agente
 
@@ -42,17 +44,19 @@ El análisis lo hacen 3 agentes virtuales internos, consolidados por un Lead Opt
 
 ## ✨ Características
 
-- ✅ **Multiidioma** — el reporte sale en el idioma de tu perfil
+- ✅ **Multiidioma con bloqueo de idioma** — las instrucciones internas están en inglés, pero el reporte SIEMPRE sale en el idioma de tu perfil (con glosario de etiquetas ES/EN para evitar mezclas)
 - ✅ **Multi-formato** — acepta PDF de LinkedIn, capturas de pantalla, o ambos
 - ✅ **Cuestionario previo** — pregunta tu objetivo real antes de auditar (empleo, clientes, marca personal, networking, becas, inversionistas... el que sea)
 - ✅ **Cero invenciones** — si un dato es ambiguo o falta, te pregunta en vez de inventarlo
 - ✅ **Objetivo abierto** — todo el reporte se adapta a *tu* meta, no a un molde genérico
+- ✅ **Límites reales de LinkedIn** — respeta los 220/2.600/2.000 caracteres y el front-loading de los primeros ~70
+- ✅ **Puntuación con rúbrica** — el score sale de una tabla de bandas, no de una impresión general
 
 ## 📦 Instalación
 
 ### En Claude.ai
 
-1. Descarga el archivo [`linkedin-optimizer.skill`](../../releases) (o empaquétalo tú mismo, ver abajo)
+1. Clona el repo y empaqueta el skill (ver abajo), o descárgalo desde [Releases](../../releases) si hay una versión publicada
 2. Súbelo a un chat de Claude
 3. Haz clic en **"Save skill"** en la tarjeta del archivo
 
@@ -60,7 +64,8 @@ El análisis lo hacen 3 agentes virtuales internos, consolidados por un Lead Opt
 
 ```bash
 # El .skill es un zip con la carpeta del skill dentro
-cd linkedin-optimizer-repo
+git clone https://github.com/ChenteIA/linkedin-optimizer-skill.git
+cd linkedin-optimizer-skill
 zip -r linkedin-optimizer.skill linkedin-optimizer/
 ```
 
@@ -75,11 +80,13 @@ zip -r linkedin-optimizer.skill linkedin-optimizer/
 
 ```
 linkedin-optimizer/
-├── SKILL.md                          # Instrucciones core del skill
+├── SKILL.md                          # Core instructions, LinkedIn limits, Language Lock
 └── references/
-    ├── agentes.md                    # Criterios de los 3 agentes
-    ├── estructura-reporte.md         # Plantilla exacta del reporte
-    └── ejemplos.md                   # Casos de flujo esperado
+    ├── agentes.md                    # 3 agents' criteria + scoring rubric
+    ├── estructura-reporte.md         # Exact report template (8 sections) + ES glossary
+    └── ejemplos.md                   # Expected flow cases (A–L)
+
+# Instrucciones internas en inglés · reporte en el idioma del perfil
 ```
 
 ## 🤝 Contribuir
@@ -89,6 +96,8 @@ linkedin-optimizer/
 - [ ] Análisis comparativo contra perfiles top del mismo sector
 - [ ] Modo "antes/después" con score proyectado
 - [ ] Soporte para páginas de empresa
+- [ ] Reporte de ejemplo con datos ficticios (sirve de demo y de test de regresión)
+- [ ] Evals automatizadas de disparo del skill
 
 ## 📄 Licencia
 

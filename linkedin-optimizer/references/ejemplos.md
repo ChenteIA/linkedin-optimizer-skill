@@ -1,50 +1,86 @@
-# Ejemplos de flujo
+# Flow examples
 
-Casos ilustrativos de cómo debe comportarse el skill. Léelos si hay dudas sobre el comportamiento esperado.
+Illustrative cases of how the skill should behave. Read these if there is any doubt about expected behavior.
 
-## Caso A — Pide auditoría sin material
+> These cases are written in English as internal documentation. The responses they describe are produced in the user's / profile's language — see the Language Lock rule in `SKILL.md`.
 
-**Usuario:** "Ayúdame a auditar mi perfil de LinkedIn"
+## Case A — Asks for an audit with no material
 
-**Respuesta correcta:** pedir el PDF (Perfil → "Recursos" → "Guardar en PDF") **o capturas de pantalla**, lo que le sea más cómodo. No generar nada todavía.
+**User:** "Help me audit my LinkedIn profile"
 
-## Caso B — Sube el material de entrada
+**Correct response:** ask for the PDF (Profile → "Resources" → "Save to PDF") **or screenshots**, whichever is easier for them. Generate nothing yet.
 
-**Usuario:** "Optimiza mi LinkedIn" + PDF
+## Case B — Uploads the input material
 
-**Respuesta correcta (primer turno):** cuestionario breve en el idioma del perfil:
-1. ¿Para qué quieres mejorar tu LinkedIn? (ejemplos: empleo, clientes, marca personal... o cualquier otro: networking, beca, inversionistas, etc.)
-2. ¿A qué puesto/audiencia apuntas?
-3. ¿Algo que destacar o evitar?
+**User:** "Optimize my LinkedIn" + PDF
 
-Esperar respuesta. **Recién entonces** generar el reporte completo con la plantilla.
+**Correct response (first turn):** short questionnaire in the profile's language:
+1. What do you want to improve your LinkedIn *for*? (examples: employment, clients, personal brand… or anything else: networking, scholarship, investors, etc.)
+2. Which role/audience are you targeting?
+3. Anything to highlight or avoid?
 
-## Caso C — Capturas parciales
+Wait for the answer. **Only then** generate the full report with the template.
 
-**Usuario:** "Revisa mi LinkedIn" + 2 capturas (solo titular y About)
+## Case C — Partial screenshots
 
-**Respuesta correcta:** cuestionario + aviso de cobertura: "solo veo tu titular y About — no veo experiencia, skills, Destacados ni recomendaciones. ¿Subes capturas de eso, o me confirmas si están vacías?"
+**User:** "Review my LinkedIn" + 2 screenshots (headline and About only)
 
-## Caso D — Objetivo no clásico
+**Correct response:** questionnaire + coverage notice: "I can only see your headline and About — I can't see experience, skills, Featured, or recommendations. Can you upload screenshots of those, or confirm they're empty?"
 
-**Usuario responde al cuestionario:** "Quiero postular a una maestría en el extranjero"
+## Case D — Non-standard goal
 
-**Comportamiento correcto:** TODO el reporte se orienta a eso — titular con perfil académico/investigación, About dirigido a comités de admisión, Destacados con papers/proyectos académicos, guión de recomendación dirigido a profesores/supervisores. No usar el molde de "reclutadores" por defecto.
+**User answers the questionnaire:** "I want to apply to a master's program abroad"
 
-## Caso E — Dato ambiguo a mitad del análisis
+**Correct behavior:** the ENTIRE report orients around that — headline with an academic/research profile, About aimed at admissions committees, Featured with papers/academic projects, recommendation script aimed at professors/supervisors. Do not fall back on the default "recruiters" mold.
 
-**Situación:** el PDF dice "aumenté las ventas 40%" pero no queda claro si fue logro individual o del equipo, y la fecha de ese rol está cortada en la captura.
+## Case E — Ambiguous data point mid-analysis
 
-**Comportamiento correcto:** detenerse y preguntar esos 2 puntos puntuales antes de redactar la sección de Experiencia. NO asumir, NO redactar "lideré un aumento del 40%" sin confirmación.
+**Situation:** the PDF says "increased sales 40%" but it is unclear whether this was an individual or team achievement, and the date of that role is cut off in the screenshot.
 
-## Caso F — Conflicto PDF vs. captura
+**Correct behavior:** stop and ask about those 2 specific points before drafting the Experience section. Do NOT assume, do NOT write "I led a 40% increase" without confirmation.
 
-**Situación:** el PDF muestra un titular y la captura muestra otro distinto.
+## Case F — PDF vs. screenshot conflict
 
-**Comportamiento correcto:** preguntar cuál es la versión vigente antes de continuar. Nunca elegir una al azar.
+**Situation:** the PDF shows one headline and the screenshot shows a different one.
 
-## Caso G — Iteración post-reporte
+**Correct behavior:** ask which is the current version before continuing. Never pick one at random.
 
-**Usuario:** "Dame 3 variantes más del titular"
+## Case G — Post-report iteration
 
-**Comportamiento correcto:** responder solo esa parte (3 titulares nuevos con su "por qué funciona"), sin repetir el reporte completo.
+**User:** "Give me 3 more headline variants"
+
+**Correct behavior:** answer only that part (3 new headlines with their "why it works"), without repeating the full report.
+
+## Case H — Profile with no metrics (very common)
+
+**Situation:** a recent graduate in the thesis stage. Their experience consists of internships and academic projects: no percentages, no business figures.
+
+**Correct behavior:** do NOT invent metrics and do NOT write "optimized processes by 30%". Build social proof from what IS verifiable in the material: project names, stack used, real scope if stated, certifications. And log "absence of impact metrics" as a 🔴 gap in the Diagnosis and as an item in the Action Plan, specifying what they should start measuring.
+
+**Incorrect:** leaving the social-proof section empty "because there's no data". The user expects usable text, not a hole.
+
+## Case I — A single round of questions
+
+**Situation:** the user uploads the PDF. On reading it you detect: (a) their goal is unclear, (b) a 40% achievement with unclear attribution, (c) an inconsistent date between two roles.
+
+**Correct behavior:** one single message with all three together — context questionnaire + the two ambiguities. Then the report.
+
+**Incorrect:** ask about the goal, wait, start drafting, and only then ask about the 40%. That's three turns where one was enough.
+
+## Case J — Bilingual profile
+
+**Situation:** the headline is in English and the About is in Spanish.
+
+**Correct behavior:** ask in the single round which language they want the report and the optimized texts in. Do not assume based on the language of the first field you happened to read.
+
+## Case K — Headline that gets truncated
+
+**Situation:** you draft a 215-character headline where the role only appears at character 90.
+
+**Correct behavior:** rewrite it. The first ~70 characters are all that shows in search, comments, and mobile; if the role isn't there, the headline fails its job even though it respects the 220 limit.
+
+## Case L — Instruction language leaking into the output
+
+**Situation:** the profile is entirely in Spanish, but these instructions are in English, and you begin drafting "# 🚀 LinkedIn Audit and Optimization: …".
+
+**Correct behavior:** stop and restart in Spanish, using the label glossary in `estructura-reporte.md`. The instruction language is an implementation detail and never determines the output language.
