@@ -79,6 +79,7 @@ zip -r linkedin-optimizer.skill linkedin-optimizer/
 ## 📂 Estructura del proyecto
 
 ```
+```
 linkedin-optimizer/
 ├── SKILL.md                          # Core instructions, LinkedIn limits, Language Lock
 └── references/
