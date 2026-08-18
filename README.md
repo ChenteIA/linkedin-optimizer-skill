@@ -85,9 +85,9 @@ linkedin-optimizer/
     ├── agentes.md                    # 3 agents' criteria + scoring rubric
     ├── estructura-reporte.md         # Exact report template (8 sections) + ES glossary
     └── ejemplos.md                   # Expected flow cases (A–L)
-
-# Instrucciones internas en inglés · reporte en el idioma del perfil
 ```
+
+> **Nota:** las instrucciones internas del skill están en inglés por consistencia con el ecosistema de Agent Skills. El reporte que recibes **siempre** sale en el idioma de tu perfil.
 
 ## 🤝 Contribuir
 
